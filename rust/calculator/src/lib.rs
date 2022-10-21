@@ -7,6 +7,7 @@ mod components;
 use crate::components::add;
 use crate::components::fib;
 use crate::components::sqrt;
+use crate::components::subtract;
 
 pub fn run() -> Result<(), Box<dyn Error>> {
 
@@ -28,6 +29,9 @@ pub fn run() -> Result<(), Box<dyn Error>> {
             a = str.trim().parse()?;
 
             println!("{}", sqrt::sqrt(a));
+        },
+        mode::SUB => {
+            println!("{}",subtract::subtract(1,2));
         },
         _ => {
             println!("Unimplemented");
